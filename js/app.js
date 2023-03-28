@@ -1,1 +1,0 @@
-console.log('Tự học Node JS nè trời')

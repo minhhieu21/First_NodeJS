@@ -1,17 +1,13 @@
 const express = require('express');
-
+const { getHomepage, getDemo } = require('../controllers/homeController');
 const router = express.Router();
 
-
-
-//khai báo route
-router.get('/', (req, res) => {
-    res.send('Hello World and nodemon!')
-})
+// router.Method('/router',handle);
 
 //khai báo route
-router.get('/demo', (req, res) => {
-    res.render('sample.ejs')
-})
+router.get('/', getHomepage);
+
+//khai báo route
+router.get('/demo', getDemo);
 
 module.exports = router; //export default
